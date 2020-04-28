@@ -46,7 +46,10 @@ static String operation(int a, int b, int N){
 	}
 	return "none";
 }
-//6 - 
+//6 -  функция, которая возвращает значение ASCII переданного символа. 
+static int ctoa (String a) {
+	return a.charAt(0);	
+}
 
 //7 - Напишите функцию, которая берет последнее число из последовательного списка
 //чисел и возвращает сумму всех чисел до него и включая его. 
@@ -85,32 +88,33 @@ else {
 public static void main(String[] args) {
 //1 
 		Scanner in = new Scanner(System.in);
-		System.out.println("enter divisor and dividend");
+		System.out.println("#1 - enter divisor and dividend");
 		System.out.println("remainder of division operation: " + remaider(in.nextInt(),in.nextInt()));	
 //2
-		System.out.println("enter the base and height of the triangle");
+		System.out.println("#2 - enter the base and height of the triangle");
 		System.out.println("area of this triangle: " + area(in.nextInt(),in.nextInt()));	
 //3
-		System.out.println("enter count of chickens,cows,pigs");
+		System.out.println("#3 - enter count of chickens,cows,pigs");
 		System.out.println("count of legs: "+animals(in.nextInt(),in.nextInt(), in.nextInt()));
 //4
-		System.out.println("enter prob,prize,pay");
+		System.out.println("#4 - enter prob,prize,pay");
 		System.out.println(profitableGamble(in.nextDouble(),in.nextDouble(),in.nextDouble()));
 
 //5
-	System.out.println("enter nubbers and result");
+	System.out.println("#5 - enter nubbers and result");
 	System.out.println("necessary operation: " + operation(in.nextInt(), in.nextInt(), in.nextInt()));
 //6
-	
+	System.out.println("#6 - enter symbol");
+	System.out.println("ASCII of that symbol: " + ctoa(in.next()));
 //7
-	System.out.println("enter number");
+	System.out.println("#7 - enter number");
 	System.out.println("addUpTo: " + addUpTo(in.nextInt()));
 //8
-	System.out.println("enter lines if triagle");
+	System.out.println("#8 - enter lines if triagle");
 	System.out.println("max lenght of triagle: " + nextEdge(in.nextInt(), in.nextInt()));
 //9 
 	ArrayList <Integer> elements = new ArrayList<Integer>(); //ввод списка	
-	System.out.print("enter the list");
+	System.out.print("#9 - enter the list");
 	if (in.hasNextInt()){
 		elements.add(in.nextInt());
 	}
@@ -118,7 +122,7 @@ public static void main(String[] args) {
 	//System.out.println(elements);
 	System.out.println("SumOfCubes: " + sumOfCubes(elements));	
 //10
-	System.out.println("enter numbers");
+	System.out.println("#10 - enter numbers");
 	System.out.println("Is result divisible by C: "+ abcmath(in.nextInt(), in.nextInt(), in.nextInt()));	
 }
 }
